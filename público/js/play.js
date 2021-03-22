@@ -9,7 +9,6 @@ try{
         index:0,
         start(){
             this.Play = this.masterPlay[this.index];
-            alert(this.Play)
             this.imagem.style.background=`url('${this.Play.imagem}') no-repeat center center/cover`
             this.artista.innerText = this.Play.artista;
             this.titulo.innerText = this.Play.titulo;
