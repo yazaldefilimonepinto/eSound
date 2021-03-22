@@ -1,9 +1,11 @@
 # eSound 🤓😜
+
+
 <div alian="center">
     <img heidth="50%" src="main.png">
 </div>
 
-#####O que e #eSound?
+##O que e eSound?
 > E um leitor de música desenvolvido em JavaScript HTML CSS.
 
 
@@ -25,7 +27,7 @@
      node index.js
 
 
-#####😜🤓 ve o meu projeto com este [link](https://yazaldefilimonepinto.github.io/eSound/)
+###😜🤓 ve o meu projeto com este [link](https://yazaldefilimonepinto.github.io/eSound/)
 
 
 https://yazaldefilimonepinto.github.io/eSound/
