@@ -13,6 +13,7 @@ try{
             this.artista.innerText = this.Play.artista;
             this.titulo.innerText = this.Play.titulo;
             this.musica.src = wai(this.Play.musica);
+            alert(this.Play.artista)
             this.musica.addEventListener("ended", this.next)
          },
         next(){
