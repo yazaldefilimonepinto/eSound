@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>YF-eSounde </title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
    <div class="card">
@@ -11,14 +11,37 @@
        <div class="conteiner">
            <div class="card__img"></div>
            <div class="card__info">
-               <h5>Titulo</h4>
-                <p>artista</p>
-                <audio controls ></audio>
+               <div class="b">
+                   <p class="main">creaded by <a href="https://github.com/yazaldefilimonepinto">Yazalde felimone</a></p>
+                     <button>Play</button>
+               </div>
+               <div class="conteiner__master">
+                   <div class="cont">
+                       <p class="ar">artista</p>
+                        <h5>Titulo</h4>
+                   </div>
+                   <div class="bota">
+                       <button class="Next">Next</button>
+                       <button class="Back">Back</button>
+                   </div>
+               </div>
+
+           </div>
+           <div class="audio">
+               <div class="inicio">00:00</div>
+               <div class="barra">
+                   <input class="barra__input" min="0" max="0" type="range">
+               </div>
+               <div class="fim">00:00</div>
+                <div class="vul">
+                    <input class="barra__vul"  min="0" max="100" type="range">
+                    <div class="m"> :000</div>
+                </div>
            </div>
        </div>
    </div>
-   <script src="public/js/Data.js"></script>
-    <script src="public/js/play.js"></script>
-    <script src="public/js/global.js"></script>
+   <script src="/js/Data.js"></script>
+    <script src="/js/play.js"></script>
+    <script src="/js/global.js"></script>
 </body>
 </html>
