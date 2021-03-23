@@ -1,6 +1,6 @@
 try{
     window.wai = function(files){
-        return `/players/${files}`
+        return `public/players/${files}`
     }
     window.mtmAudio = (files) => {
         const menutos = Math.floor(files/60);
