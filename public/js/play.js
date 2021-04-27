@@ -1,5 +1,7 @@
 try{
+
     window.Dados = {
+        lista:document.querySelector(".lista"),
         imagem:document.querySelector(".card__img"),
         artista:document.querySelector(".card__info h5"),
         titulo:document.querySelector(".card__info .ar"),
@@ -45,7 +47,7 @@ try{
             }
         },
         controlsVolume(valor){
-            this.audio.valume = valor/100;  
+            this.audio.vulume = valor/100;
             this.texmenunt.innerText = `${valor}%`
         },
         controlsAudio(valor){
@@ -56,7 +58,7 @@ try{
            if(this.index == this.masterPlay.length){
                this.index=0;
            }
-            this.start()
+            this.str()
             this.audio.Play()
         },
         Bnext(){
@@ -65,7 +67,7 @@ try{
            if(this.index == this.masterPlay.length){
                this.index=0;
            }
-            this.start()
+            this.str()
             this.play()
         },
         Bback(){
@@ -74,7 +76,7 @@ try{
             if(this.index == 0){
                 this.index = this.masterPlay.length;
             }
-            this.start()
+            this.str()
             this.audio.play()
         },
         update(){
@@ -97,12 +99,62 @@ try{
             this.ButaoBack.addEventListener("click", () => this.Bback())
             //alert(this.masterPlay.length)
         },
+        getViewsFromHtml(){
+            this.masterPlay.forEach((intem, index) => {
+                this.lista.innerHTML += `
+                <div id="${index}" class="musica">
+                    <h4>${intem.artista}</h4>
+                    <p>${intem.titulo}</p>
+                </div>
+                `
+            })
+        },
+        setStyle(){
+            const musicas = document.querySelectorAll(".musica");
+            musicas.forEach((intem, index) => {
+                if(index === this.index){
+                    intem.style.border="5px solid #7B1FA2"
+                }
+                if(index !== this.index){
+                    intem.style.border="5px solid #071A52"
+                }
+            })
+        },
+        activeMusictheFroEach(){
+            const musicas = document.querySelectorAll(".musica");
+            musicas.forEach((intem, index) => {
+                intem.addEventListener("click", () => {
+                    this.index = intem.id;
+                    this.audio.pause();
+                    this.update();
+                    this.audio.play();
+
+                })
+            })
+        },
         start(){
+            this.getViewsFromHtml();
             this.update()
-            this.toolUpdate()
+            this.toolUpdate();
+            this.loadAudio();
+            this.actualUpdate();
+            this.activeMusictheFroEach();
+            this.setStyle();
+            this.toolsPlay();
+        },
+        str(){
+            this.update()
+            this.toolUpdate();
             this.loadAudio()
-         }
+            this.actualUpdate();
+            this.setStyle();
+            this.toolsPlay();
+        }
     }
 }catch(err){
     alert(err)
 }
+
+
+
+

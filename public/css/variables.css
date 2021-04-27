@@ -1,0 +1,14 @@
+:root{
+    --cor-principal:#7159c1;
+    --cor-bg-font-w:#fff;
+    --cor-bg-font-B:#000;
+    --cor-shadow:#000;
+    --cor-secundaria:#fff;
+}
+.root:root{
+    --cor-principal:#118AB2;
+    --cor-bg-font-w:#071A52;
+    --cor-secundaria:#073B4C;
+    --cor-shadow:#071A52;
+    --cor-bg-font-B:#071A52;
+}

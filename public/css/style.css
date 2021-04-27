@@ -1,47 +1,54 @@
+@import url("./variables.css");
 body{
     font-size:65.5%;
     margin:0;
     border: none;
-    background-color:white;
+    background-color:var(--cor-secundaria);
     display:flex;
     justify-content:center;
     align-items:center;
     font-family: monospace;
 }
 .card{
+    margin:0 auto;
     width: 80%;
-    box-shadow:10px 10px 10px 5px #333;
+    box-shadow:10px 10px 10px 5px var(--cor-shadow);
     font-size:2rem;
+    background-color:var(--cor-bg-font-w);
     padding:2rem;
-    transform:translateY(10%);
+    transform:translateY(5%);
+    overflow:hidden;
+    border-radius:5%;
+    position:relative;
+    height:80%;
     padding-bottom:2rem;
 }
 span{
     width:2rem;
     height:4px;
-    background-color:black;
+    background-color:var(--cor-bg-font-B);
     display:none;
     margin-top:5px;
     margin-bottom:5px;
 }
-span::before{
+/*span::before{
     content:"";
     display:block;
     height:4px;
     width:2rem;
-    background-color:black;
-}
-span::after{
+    background-color:var(--cor-bg-font-B);
+}*/
+/*span::after{
     content:"";
     display:block;
     height:4px;
     width:2rem;
-    background-color:black;
-}
+    background-color:var(--cor-bg-font-B);
+}*/
 h4{
     font-size:2rem;
     font-weight: bold;
-    color:#7159c1;
+    color:var(--cor-principal);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -50,6 +57,7 @@ h4{
 }
 .card__img{
     /*background:url("/viewsplay/audio1.png") no-repeat center center/cover;*/
+    border-radius:5%;
     height:40rem;
     width:50rem;
 }
@@ -61,13 +69,16 @@ audio{
     justify-content:space-around;
 
 }
+input[type="range"]{
+
+}
 .barra{
     margin-left:1rem;
     margin-right:1rem;
 }
 .barra__input{
     width:10rem;
-    color:#7159c1;
+    color:var(--cor-bg-font-B);
     border-radius:5px;
 }
 .b{
@@ -79,7 +90,7 @@ audio{
 button{
     padding:2rem;
     background-color:#7159c1;
-    color:white;
+    color:var(--cor-bg-font-w);
     border:none;
     z-index:999;
     border-radius:1.5rem;
@@ -89,6 +100,7 @@ button{
 }
 .vul{
     display:flex;
+    align-items: center;
     justify-content: space-between;
 }
 .m{
@@ -107,4 +119,137 @@ button{
 }
 .Next,.Back{
     padding:1rem;
+}
+
+.dark{
+    margin-top:20px;
+    width:100%;
+    height:110px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.toggle{
+    width:100px;
+    height:50px;
+    position: relative;
+    background-color:#AACFCF;
+    transition:1s;
+    float:right;
+    right:4px;
+    border-radius:50px;
+}
+.gle{
+    width:48px;
+    height:48px;
+    transition:1s;
+    left:2px;
+    top:1px;
+    position:absolute;
+    background-color:var(--cor-secundaria);
+    border-radius:50%;
+}
+.dark div > button{
+    padding:15px;
+
+}
+
+.active{
+    transform:translateX(50px);
+}
+.cardLista{
+    width:100%;
+   /* overflow-y: scroll;*/
+    box-shadow:10px 10px 10px 5px var(--cor-shadow);
+    font-size:2rem;
+    background-color:var(--cor-bg-font-w);
+    transform:translateY(10%);
+    border-radius:5%;
+    margin:0 auto;
+    top:-125px;
+    left:-5px;
+    height:100%;
+    z-index:99999;
+    animation:1s animar linear;
+    animation-delay: 2;
+    animation-duration:1s;
+    display:none;
+    position:absolute;}
+/*h4 > span{
+    display:block;
+}*/
+.lista .musica{
+    display:flex;
+    justify-content:space-around;
+    border-radius:50px;
+    width:95%;
+    align-items:center;
+}
+.lista{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    flex-direction:column;
+    width:100%;
+
+    height:80%;
+    overflow-y: scroll;
+}
+.t h1{
+    font-size:2.5rem;
+    border-left:8px solid var(--cor-principal);
+    padding:2rem;
+    margin-left:2.5rem;
+    margin-top:2rem;
+}
+.t{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    /*position:fixed;*/
+}
+.musica{
+    border:5px solid var(--cor-principal);
+    margin-bottom:10px;
+}
+.musica:hover{
+    border:5px solid yellow;
+}
+
+@keyframes  animar{
+    to{
+        transform: scale(-2);
+    }
+    from{
+        transform:scale(0)
+    }
+}
+.cor{
+    border:5px solid var(--cor-principal);
+}
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height:2px;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--cor-principal);
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    border-radius: 50%;
+}
+
+
+
+#input::-webkit-slider-thumb{
+    /*all:unset;*/
+  -webkit-appearance: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: blue;
 }

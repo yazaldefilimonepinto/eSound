@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>YF-eSounde </title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
    <div class="card">
@@ -12,8 +13,8 @@
            <div class="card__img"></div>
            <div class="card__info">
                <div class="b">
-                   <p class="main">creaded by <a href="https://github.com/yazaldefilimonepinto">Yazalde felimone</a></p>
-                     <button>Play</button>
+                   <p class="main">Created with 💜 for <a href="https://github.com/yazaldefilimonepinto">Yazalde</a></p>
+                   <button class="playMusic">Play</button>
                </div>
                <div class="conteiner__master">
                    <div class="cont">
@@ -30,18 +31,35 @@
            <div class="audio">
                <div class="inicio">00:00</div>
                <div class="barra">
-                   <input class="barra__input" min="0" max="0" type="range">
+                   <input id="input" class="barra__input" min="0" max="0" type="range">
                </div>
                <div class="fim">00:00</div>
                 <div class="vul">
-                    <input class="barra__vul"  min="0" max="100" type="range">
-                    <div class="m"> :000</div>
+                    <input id="input" class="barra__vul"  min="0" max="100" type="range">
+                    <div class="m">00</div>
                 </div>
            </div>
        </div>
+       <div class="dark">
+           <div>
+               <button class="Sons" type="button">Sons</button>
+           </div>
+           <div class="toggle">
+               <div class="gle"></div>
+           </div>
+       </div>
+       <div class="cardLista">
+           <div class="t">
+               <h1>Lista de musicas</h1>
+               <button class="voltar">voltar</button>
+           </div>
+           <div class="lista">
+           </div>
+       </div>
    </div>
-   <script src="public/js/Data.js"></script>
-    <script src="public/js/play.js"></script>
-    <script src="public/js/global.js"></script>
+   <script src="/js/Data.js"></script>
+    <script src="/js/play.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/toggle.js"></script>
 </body>
 </html>
