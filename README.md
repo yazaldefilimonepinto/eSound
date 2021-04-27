@@ -1,5 +1,6 @@
 # eSound 🤓😜
 
+**V1.0.0**
 
 <div alian="center">
     <img heidth="50%" src="main.png">
@@ -10,10 +11,22 @@
 
 > E um leitor de música desenvolvido em JavaScript HTML CSS.
 
-**Actualização**
+**Actualização V1.1.0**
 
 <div alian="center">
     <img heidth="50%" src="public/root.png">
+</div>
+
+**Actualização V2.1.0**
+
+<div alian="center">
+    <img heidth="50%" src="public/root3.png">
+</div>
+
+
+<div alian="center">
+    <img heidth="50%" src="public/modroot.png">
+    <img heidth="50%" src="public/mod.png">
 </div>
 
 ##### como usar?
@@ -37,4 +50,9 @@
 ###😜🤓 ve o meu projeto com este [link](https://yazaldefilimonepinto.github.io/eSound/)
 
 
-https://yazaldefilimonepinto.github.io/eSound/
+
+
+
+
+
+**Created with 💙 by  [Yazalde Felimone](https://linkedin.com/)**
